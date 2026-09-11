@@ -28,7 +28,7 @@ def start_client():
     threading.Thread(target=receive_messages, args=(client,), daemon=True).start()
 
     while True:
-        msg = input("You: ")
+        msg = input("\nYou: ")
         if msg.lower() == 'exit':
             break
         client.send(msg.encode('utf-8'))
